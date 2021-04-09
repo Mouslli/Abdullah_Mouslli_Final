@@ -11,7 +11,7 @@ function setup() {
 	ctracker = new clm.tracker();
 	ctracker.init ();
 	ctracker.start (vidcapture.elt);
-	drawcanvas = document.getElementById ('defultCanvas0')
+	drawcanvas = document.getElementById ('defaultCanvas0')
 
 
 }
@@ -32,6 +32,14 @@ function draw(){
 		ctracker.draw(drawcanvas);
 		// fill (0);
 		// ellipse (position[52][0], position [52][1],10);
+
+		// var r = map(position[62][0], 250, 300, 0, 255, true)
+		// var b = map(position[62][1], 150, 200, 0, 255, true)
+
+		// background (r, 255, b)
+		// tint (255, 126)
+		// image (vidcapture, 0,0)
+
 	}
 
 
