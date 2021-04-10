@@ -3,7 +3,6 @@
 var vidcapture, ctracker, drawcanvas;
 
 
-
 function setup() {
 
 	var cnv = createCanvas (windowWidth, windowHeight);
@@ -16,8 +15,12 @@ function setup() {
 	ctracker = new clm.tracker();
 	ctracker.init ();
 	ctracker.start (vidcapture.elt);
-	drawcanvas = document.getElementById ('defaultCanvas0')
+	drawcanvas = document.getElementById ('defaultCanvas0');
+
+
 }
+
+
 
 
 
@@ -58,7 +61,7 @@ function draw(){
 		ellipse (position [27][0], position[27][1], 20)
 		ellipse (position [32][0], position[32][1], 20)
 
-///Face stuff
+///beard lines 
 		// var face = position [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14];
 
 		// face.forEach (function(face){
@@ -85,7 +88,17 @@ function draw(){
 		line (position[13][0], position[13][1], position[13][0] , position[13][1]+25);
 		line (position[14][0], position[14][1], position[14][0] , position[14][1]+25);
 
+////Rainbow gif
+		let mouthX = position [60][1]-position[57][1];
+		
+		if (mouthX > mouthX*0.1){ 
 
+
+			noStroke();
+			rect (position [27][0] -15 , position[27][1]- 15, 30, 30)
+			rect (position [32][0] - 15, position[32][1]- 15, 30, 30)
+
+		}
 
 
 	}
