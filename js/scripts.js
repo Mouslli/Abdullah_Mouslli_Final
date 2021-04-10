@@ -17,10 +17,6 @@ function setup() {
 	ctracker.init ();
 	ctracker.start (vidcapture.elt);
 	drawcanvas = document.getElementById ('defaultCanvas0')
-
-
-
-
 }
 
 
@@ -48,24 +44,51 @@ function draw(){
 		var faceheight = (position [7][1] - position [0][1])*1.8;
 		
 ///map the RGB values of the face with according to the position of the nose 
-		var r = map(position[62][0], 150, 300, 0, 255, true)
-		var b = map(position[62][1], 100, 250, 0, 255, true)
+		var r = map(position[62][0],50, 400, 0, 255, true)
+		var b = map(position[62][1], 50, 400, 0, 255, true)
 		fill (r,200, b, 100);
 		noStroke();
 		ellipse (facecenterX, facecenterY, facewidth, faceheight);
 ///Create eye points 
 //map the RGB values of the face with according to the position of the nose 
-		var r1 = map(position[32][0], 0, width, 0, 255, true)
-		var b1 = map(position[32][1], 0, height, 0, 255, true)
+		var r1 = map(position[32][0], 100, 300, 0, 255, true)
+		var b1 = map(position[32][1], 100, 350, 0, 255, true)
 		fill (r1,200, b1, 100);
 		noStroke();
 		ellipse (position [27][0], position[27][1], 20)
 		ellipse (position [32][0], position[32][1], 20)
 
+///Face stuff
+		// var face = position [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14];
+
+		// face.forEach (function(face){
+		// 	stroke(0);
+		// 	strokeWeight (5);
+		// 	line (face[0], face[1], face[0], face[1]-30);
+		
+		// })
+		stroke(r, 100, b);
+		strokeWeight (5)
+		line (position[0][0], position[0][1], position[0][0] , position[0][1]+25);
+		line (position[1][0], position[1][1], position[1][0] , position[1][1]+25);
+		line (position[2][0], position[2][1], position[2][0] , position[2][1]+25);
+		line (position[3][0], position[3][1], position[3][0] , position[3][1]+25);
+		line (position[4][0], position[4][1], position[4][0] , position[4][1]+25);
+		line (position[5][0], position[5][1], position[5][0] , position[5][1]+25);
+		line (position[6][0], position[6][1], position[6][0] , position[6][1]+25);
+		line (position[7][0], position[7][1], position[7][0] , position[7][1]+25);
+		line (position[8][0], position[8][1], position[8][0] , position[8][1]+25);
+		line (position[9][0], position[9][1], position[9][0] , position[9][1]+25);
+		line (position[10][0], position[10][1], position[10][0] , position[10][1]+25);
+		line (position[11][0], position[11][1], position[11][0] , position[11][1]+25);
+		line (position[12][0], position[12][1], position[12][0] , position[12][1]+25);
+		line (position[13][0], position[13][1], position[13][0] , position[13][1]+25);
+		line (position[14][0], position[14][1], position[14][0] , position[14][1]+25);
 
 
 
-}
+
+	}
 }
 
 
